@@ -46,9 +46,9 @@ It replaces the default global gravity with a **localized and dynamic gravity mo
 
 ## Selected Source Files
 
-- [PlanetGravitySystem.cpp](../../code/PlanetGravity/PlanetGravitySystem.cpp)
-- [GravitySourceComponent.cpp](../../code/PlanetGravity/GravitySourceComponent.cpp)
-- [GravityMovementComponent.cpp](../../code/PlanetGravity/GravityMovementComponent.cpp)
+- [PlanetGravitySystem.cpp](../../code/PlanetGravitySystem/PlanetGravitySystem.cpp)
+- [GravitySourceComponent.cpp](../../code/PlanetGravitySystem/PlanetGravityAttractorComponent.cpp)
+- [GravityMovementComponent.cpp](../../code/PLanetGravitySystem/PlanetGravityCharacterMovement.cpp)
 
 ---
 
@@ -56,7 +56,7 @@ It replaces the default global gravity with a **localized and dynamic gravity mo
 
 ```text
 Planet Actor
-└── UGravitySourceComponent
+└── Planet Gravity Attractor Component
       └── Defines gravity origin and strength
       └── Registers in gravity system
 
@@ -65,7 +65,7 @@ Physics / Gameplay Actor
       └── Receives force toward nearest attractor
 
 Character
-└── Custom Movement Component
+└── Planet Gravity Character Movement
       └── Aligns orientation to gravity direction
       └── Handles movement on curved surfaces
 
