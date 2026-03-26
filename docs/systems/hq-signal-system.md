@@ -38,8 +38,8 @@ This makes the system flexible enough for:
 ## High-Level Architecture
 
 ## Selected Source Files
-- [HQSignalSystem.cpp](../Source/HQSignalSystem/HQSignalSystem.cpp)
-- [HQSignalReceiverComponent.cpp](../Source/HQSignalSystem//HQSignalReceiverComponent.cpp)
+- [HQSignalSystem.cpp](../../Source/HQSignalSystem/HQSignalSystem.cpp)
+- [HQSignalReceiverComponent.cpp](../../Source/HQSignalSystem/HQSignalReceiverComponent.cpp)
 
 ```text
 Signal Source Actor
