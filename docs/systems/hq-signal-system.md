@@ -1,37 +1,53 @@
 # HQ Signal System
 
-A modular gameplay signal system built for a sandbox exploration project in Unreal Engine 5.5.
+A gameplay-driven signal system designed for a sandbox exploration project in Unreal Engine 5.5.
 
-The system is designed around **signal sources**, **signal receivers**, and a centralized **world subsystem** that evaluates signal strength at a given location.  
-Its purpose is to provide a reusable foundation for mechanics such as communication range, proximity-based detection, environmental scanning, and signal-driven gameplay feedback.
+This system is not just a technical feature — it is a **core gameplay mechanic** that defines how the player interacts with the world.
+
+The player is represented as a central "HQ" (base) that can deploy and control robots.  
+However, control over a robot is only possible while it remains within signal coverage.
+
+This creates a gameplay loop where **exploration is constrained and extended through signal infrastructure**.
+
+---
+
+## Gameplay Concept
+
+- The player acts as a central base (HQ) that makes decisions
+- The base can deploy robots to interact with the world
+- Each robot can only be controlled while within signal range
+- If signal is lost:
+  - the robot becomes inactive
+  - control returns to the base
+  - the player must deploy a new robot
+
+To explore further, the player must **extend signal coverage** using:
+- temporary relay objects (similar to tethers)
+- permanent structures (antennas, towers)
+- future systems (e.g. satellites)
+
+This makes signal not just a UI value, but a **core progression and exploration mechanic**.
 
 ---
 
 ## Purpose
 
-The goal of this system is to simulate a signal network where:
-- signal sources emit signal in a configurable range
-- receivers query the signal state at their current location
-- signal strength changes depending on distance
-- attenuation can be customized with a curve
-- gameplay or UI can react to signal updates through Blueprint events
-
-This makes the system flexible enough for:
-- HQ communication systems
-- radar / scanner mechanics
-- beacon detection
-- exploration feedback
-- area-based interaction logic
+The system provides a foundation for:
+- limiting player reach through signal coverage
+- creating exploration paths via signal extension
+- enabling risk/reward decisions (go further vs lose connection)
+- supporting future large-scale communication systems
 
 ---
 
 ## Design Goals
 
+- **Gameplay-first** — system directly supports core player loop
 - **Modular** — signal emitters and receivers are independent components
-- **Reusable** — can be attached to different gameplay actors
-- **Data-driven** — attenuation behavior can be configured with curves
-- **Blueprint-friendly** — receiver broadcasts updates via multicast delegate
-- **Lightweight** — current implementation avoids per-frame ticking
+- **Reusable** — applicable to different gameplay actors and systems
+- **Data-driven** — attenuation controlled via curves
+- **Blueprint-friendly** — signal updates exposed via events
+- **Lightweight** — avoids per-frame ticking
 
 ---
 
@@ -40,6 +56,9 @@ This makes the system flexible enough for:
 ## Selected Source Files
 - [HQSignalSystem.cpp](../../code/HQSignalSystem/HQSignalSystem.cpp)
 - [HQSignalReceiverComponent.cpp](../../code/HQSignalSystem/HQSignalReceiverComponent.cpp)
+
+## Detailed System Breakdown
+- [HQ Signal System — Full Technical Breakdown](../systems/hq-signal-system.md)
 
 ```text
 Signal Source Actor
