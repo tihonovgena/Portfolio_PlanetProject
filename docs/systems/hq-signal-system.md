@@ -55,9 +55,6 @@ The system provides a foundation for:
 - [HQSignalSystem.cpp](../../code/HQSignalSystem/HQSignalSystem.cpp)
 - [HQSignalReceiverComponent.cpp](../../code/HQSignalSystem/HQSignalReceiverComponent.cpp)
 
-## Detailed System Breakdown
-- [HQ Signal System — Full Technical Breakdown](../systems/hq-signal-system.md)
-
 ## High-Level Architecture
 ```text
 Signal Source Actor
