@@ -37,6 +37,10 @@ This makes the system flexible enough for:
 
 ## High-Level Architecture
 
+## Selected Source Files
+- [HQSignalSystem.cpp](../Source/HQSignalSystem/HQSignalSystem.cpp)
+- [HQSignalReceiverComponent.cpp](../Source/HQSignalSystem//HQSignalReceiverComponent.cpp)
+
 ```text
 Signal Source Actor
 └── UHQSignalSourceComponent
@@ -51,7 +55,3 @@ UHQSignalSystem (UWorldSubsystem)
 └── Stores registered signal sources
 └── Evaluates strongest signal for a world location
 └── Returns FHQSignalData
-
-## Selected Source Files
-- [HQSignalSystem.cpp](../../code/HQSignalSystem.cpp)
-- [HQSignalReceiverComponent.cpp](../../code/HQSignalReceiverComponent.cpp)
