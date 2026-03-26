@@ -25,5 +25,5 @@ Description: Added base planet sphere gravity atttractors affected on physics ac
 
 Date February 21, 2026
 [YoutubeLink](https://youtu.be/g0srvQBo0Rc?si=LOVJi3EMkopikrvG)
-![HQSignalSystem_1](./Screenshots/Image_HQSignalSystem.png)
+![HQSignalSystem_1](./Screenshots/Image_HQSignalSystem_1.png)
 Description: Created HQ Signal System which have sources and recivers, reciver can get signal from source based on distance and attitution signal strength is changed.
