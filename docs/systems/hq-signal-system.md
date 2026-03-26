@@ -2,7 +2,7 @@
 
 A gameplay-driven signal system designed for a sandbox exploration project in Unreal Engine 5.5.
 
-This system is not just a technical feature — it is a **core gameplay mechanic** that defines how the player interacts with the world.
+It is a **core gameplay mechanic** that defines how the player interacts with the world.
 
 The player is represented as a central "HQ" (base) that can deploy and control robots.  
 However, control over a robot is only possible while it remains within signal coverage.
