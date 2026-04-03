@@ -35,6 +35,7 @@ This repositary will show you game structure, devlog, and some soruce code of ga
 
 ## Project structure
 
+```text
 Source
 └── Game
       └── Objectes and systems realted to game itself (UI manager, Game Instance, Game Modes)
