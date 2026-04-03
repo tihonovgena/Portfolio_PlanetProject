@@ -1,41 +1,16 @@
 # Planet Project (UE5.5)
 
 A solo-developed sandbox exploration game inspired by Astroneer and Outer Wilds.  
-Focused on systemic gameplay, procedural planets, and physics-driven interactions.
+Focused on survival and building mechanics, with expolration gameplay and Co-op.
+This repositary will show you game structure, devlog, and some soruce code of game and gampeplay sysytems.
 
 📅 Development started: February 20, 2026  
 ⚙️ Engine: Unreal Engine 5.5  
-🎯 Focus: Gameplay Programming / Systems Design / Procedural Generation  
+🎯 Genre: Survival, Advanture, Strategy
 
 ---
 
-## Overview
-
-This project is a technical exploration of building a modular sandbox game with:
-- spherical worlds (planet-based gameplay)
-- custom gravity systems
-- voxel terrain (Voxel Plugin 2.0)
-- systemic gameplay interactions
-
-The goal is not just to create a playable prototype, but to design **scalable, reusable, and maintainable systems**.
-
----
-
-## Repository Purpose
-
-This repository is a **portfolio showcase**, not the full source code.
-
-It contains:
-- development logs (devlog)
-- system breakdowns
-- selected code snippets
-- technical notes
-
-Some systems may include partial source code for demonstration purposes.
-
----
-
-## Featured Development Milestones
+## Last implemented milestones
 
 - [March 16, 2026 — Voxel Planet Integration](docs/devlog/2026-03.md#march-16-2026--voxel-planet-integration)
 - [March 15, 2026 — Character Gravity Movement](docs/devlog/2026-03.md#march-15-2026--character-gravity-movement)
@@ -46,19 +21,8 @@ Some systems may include partial source code for demonstration purposes.
 
 ## Systems Overview
 
-- Planetary Gravity System (Chaos Physics)
-- Character Movement on Spherical Worlds
-- Voxel Terrain Integration
-- Signal Communication System
-
----
-
-## Development Philosophy
-
-- System-driven design over hardcoded logic
-- Modular and reusable architecture
-- Iterative prototyping with continuous refactoring
-- Focus on scalability and edge-case handling
+- [GravitySystem](docs/systems/gravity-system.md)
+- [GravitySystem](docs/systems/hq-signal-system.md)
 
 ---
 
@@ -69,7 +33,10 @@ Some systems may include partial source code for demonstration purposes.
 
 ---
 
-## Notes
+## Project structure
 
-- Voxel Plugin 2.0 is required (not included)
-- Project is in active development
+Source
+└── Game
+      └── Objectes and systems realted to game itself (UI manager, Game Instance, Game Modes)
+└── Gameplay
+      └── Objectes and systems realted to gameplay mechanics and features (HQSignalSystem, BuildingSystem)
