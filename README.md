@@ -22,7 +22,7 @@ This repositary will show you game structure, devlog, and some soruce code of ga
 ## Systems Overview
 
 - [GravitySystem](docs/systems/gravity-system.md)
-- [GravitySystem](docs/systems/hq-signal-system.md)
+- [HQSignalSystem](docs/systems/hq-signal-system.md)
 
 ---
 
