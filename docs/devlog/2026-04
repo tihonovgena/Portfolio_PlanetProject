@@ -1,0 +1,24 @@
+# Devlog — April 2026
+
+---
+
+## March 14, 2026 — Regesign signal field strength
+
+**Video:** https://youtu.be/RXv0JBYXTt8  
+**Related Systems:** HQ Signal System
+
+![UpdateField](../../screenshots/Image_HQSignalSystem_opt_3.png)
+
+### Summary
+First prototype of new signal field spreading was created. Now by gamplay idea signal not only spreading in radius but it can react on obstacles, to reflect signal to other sides
+or signal could not be spread behind the obstacles.
+It is steal prototype but it optimized from ~60ms to ~16ms
+![Optimization](../../screenshots/Image_HQSignalSystem_opt_1.png)
+![Optimization](../../screenshots/Image_HQSignalSystem_opt_2.png)
+![Optimization](../../screenshots/Image_HQSignalSystem_opt_3.png)
+
+### Next steps
+- Continue optimize the algorithm
+- Implement find signal strength for receiver by converting its world location to local XY srouce coordinates
+- Implement increase signal spreading based on height of source compare to ground
+- Made visual grid in gameplay showing signal boundries
