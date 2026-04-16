@@ -13,8 +13,8 @@ This repositary will show you game structure, devlog, and some soruce code of ga
 ## Last implemented milestones
 
 - [April 14, 2026 - Redesign signal field strength](docs/devlog/2026-04.md#april-14-2026---redesign-signal-field-strength)
+- [April 16, 2026 - Update signal field algorithm](docs/devlog/2026-04.md#april-16-2026---update-signal-field-algorithm)
 - [March 16, 2026 - Voxel Planet Integration](docs/devlog/2026-03.md#march-16-2026---voxel-planet-integration)
-- [March 15, 2026 - Character Gravity Movement](docs/devlog/2026-03.md#march-15-2026---character-gravity-movement)
 
 ---
 
