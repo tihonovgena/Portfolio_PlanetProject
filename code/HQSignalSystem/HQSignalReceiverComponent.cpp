@@ -7,7 +7,7 @@
 
 UHQSignalReceiverComponent::UHQSignalReceiverComponent()
 {
-	PrimaryComponentTick.bCanEverTick = false;
+	PrimaryComponentTick.bCanEverTick = true;
 }
 
 void UHQSignalReceiverComponent::StartSignalUpdate()
@@ -25,11 +25,22 @@ void UHQSignalReceiverComponent::StopSignalUpdate()
 	}
 }
 
+void UHQSignalReceiverComponent::TickComponent(float DeltaTime, enum ELevelTick TickType,
+	FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	if (bUpdateOnTick)
+	{
+		OnSignalTimerUpdated();
+	}
+}
+
 void UHQSignalReceiverComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (bAutoActive)
+	if (bAutoActive && !bUpdateOnTick)
 	{
 		StartSignalUpdate();
 	}
@@ -40,7 +51,10 @@ void UHQSignalReceiverComponent::BeginPlay()
 
 void UHQSignalReceiverComponent::OnSignalTimerUpdated()
 {
+	DECLARE_SCOPE_CYCLE_COUNTER(TEXT("ReceiveSignalData"), STAT_ReceiveSignalData, STATGROUP_HQSignalSystem);
+	
 	// TODO logic of changed data, do not broadcast if not changed
-	const FHQSignalData SignalData = SignalSystem->GetSignalData(GetOwner()->GetActorLocation());
+	FHQSignalData SignalData;
+	SignalSystem->GetSignalData(GetOwner()->GetActorLocation(), SignalData); 
 	OnSignalUpdated.Broadcast(SignalData);
 }
